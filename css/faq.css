@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+
+body{
+   
+    font-family: 'Baloo Bhaina 2' , cursive;
+}
+
+.container-fluid{
+    box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+ .container-fluid h2 {
+    color: rgb(118, 255, 105);
+    position: relative;
+    width: 23rem;
+}
+
+.container-fluid h2::after{
+ 
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    width: 50px;
+    height: 2px;
+    background-color: hotpink;
+
+}
+.que{
+    width: 100%;
+    padding: 0 5px;
+    border: 2px solid #6db5ff;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;  
+
+}
+.icon{
+    margin: 0 10px 0 0;
+    width: 25px;
+    height: 25px;
+    background:  no-repeat #6db5ff;
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+}
+.que h5{
+    font-size: 22px;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+    color: #ffff;
+}
+.ans{
+    padding: 0 15px;
+    border-left: 1px solid navy;
+    margin-left: 25px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    height: 40px;
+    transition: all .5s ease-in;
+}
+@media only screen and (max-device-width: 480px) {
+    .ans{
+        padding: 0 15px;
+        border-left: 1px solid navy;
+        margin-left: 25px;
+        font-size: 14px;
+        text-align: justify;
+        overflow: hidden;
+        height: 80px;
+        transition: all .5s ease-in;
+    }
+    .container-fluid{
+        box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+  }
+  

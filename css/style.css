@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  font-family: 'Baloo Bhaina 2', cursive;
+}
+
+body {
+  background-image: url('./img/bg1.jpg');
+  background-size : cover;
+  display         : grid;
+  height          : 100%;
+  width           : 100%;
+  text-align      : center;
+}
+
+.wrapper {
+  position        : absolute;
+  bottom          : 0;
+  left            : 0;
+  height          : 50px;
+  width           : 100%;
+  background      : #fff;
+  line-height     : 60px;
+  border-radius   : 50px;
+  /* border-radius: 25px 25px 0px 0px; */
+  box-shadow      : 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper nav {
+  position: relative;
+  display : flex;
+}
+
+.wrapper nav label {
+  flex   : 1;
+  width  : 100%;
+  z-index: 1;
+  cursor : pointer;
+}
+
+.wrapper nav label a {
+  position       : relative;
+  z-index        : -1;
+  color          : #1d1f20;
+  font-size      : 20px;
+  font-weight    : 500;
+  text-decoration: none;
+  transition     : color 0.6s ease;
+}
+
+.wrapper nav #home:checked~label.home a,
+.wrapper nav #goal:checked~label.goal a,
+.wrapper nav #FAQ:checked~label.FAQ a,
+.wrapper nav #user:checked~label.user a {
+  color: #fff;
+}
+
+.wrapper nav label a i {
+  font-size: 25px;
+  margin   : 0 7px;
+}
+
+.wrapper nav .tab {
+  position: absolute;
+  height: 73%;
+  width: 25%;
+  left: 0;
+  z-index: 0;
+  border-radius: 50px;
+  /* border-radius: 25px 25px 0px 0px; */
+  background: linear-gradient(
+45deg
+, #05abe0 0%,#8200f4 100%);
+  transition: 0.5s cubic-bezier(0.50, -0.20, 0.200, 1.30);
+}
+
+.wrapper nav #goal:checked~.tab {
+  left: 25%;
+}
+
+.wrapper nav #FAQ:checked~.tab {
+  left: 50%;
+}
+
+.wrapper nav #user:checked~.tab {
+  left: 75%;
+}
+
+.wrapper nav input {
+  display: none;
+}
+
+#loading {
+  margin-top: 10%;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid #9b59b6;
+  position: relative;
+  animation: a1 2s linear infinite;
+}
+
+#loading::before,
+#loading::after {
+  content      : '';
+  width        : 100px;
+  height       : 100px;
+  position     : absolute;
+  left         : 0;
+  top          : -10px;
+  box-sizing   : border-box;
+  border-radius: 50%;
+}
+
+#loading::before {
+  border-top: 10px solid #e67e22;
+  transform : rotate(120deg);
+}
+
+#loading::after {
+  border-top: 10px solid #3498db;
+  transform : rotate(240deg);
+}
+
+@keyframes a1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .text-hide-mobile {
+    display: none;
+  }
+}
